@@ -416,7 +416,7 @@ class CharacterEditorState extends MusicBeatState
 		var tab_group = new FlxUI(null, UI_box);
 		tab_group.name = "Settings";
 
-		var check_player = new FlxUICheckBox(10, 60, null, null, "Playable Character", 100);
+		var check_player = new FlxUICheckBox(10, 60, null, null, "Playable Character?", 100);
 		check_player.checked = daAnim.startsWith('bf');
 		check_player.callback = function()
 		{
@@ -438,13 +438,13 @@ class CharacterEditorState extends MusicBeatState
 		charDropDown.selectedLabel = daAnim;
 		reloadCharacterDropDown();
 
-		var reloadCharacter:FlxButton = new FlxButton(140, 20, "Reload Char", function()
+		var reloadCharacter:FlxButton = new FlxButton(140, 20, "Reload Current Character", function()
 		{
 			loadChar(!check_player.checked);
 			reloadCharacterDropDown();
 		});
 
-		var templateCharacter:FlxButton = new FlxButton(140, 50, "Load Template", function()
+		var templateCharacter:FlxButton = new FlxButton(140, 50, "Load Character Template", function()
 		{
 			var parsedJson:CharacterFile = cast Json.parse(TemplateCharacter);
 			var characters:Array<Character> = [char, ghostChar];
@@ -523,7 +523,7 @@ class CharacterEditorState extends MusicBeatState
 			}
 		});
 
-		var decideIconColor:FlxButton = new FlxButton(reloadImage.x, reloadImage.y + 30, "Get Icon Color", function()
+		var decideIconColor:FlxButton = new FlxButton(reloadImage.x, reloadImage.y + 30, "Get Icon's Main Color", function()
 			{
 				var coolColor = FlxColor.fromInt(CoolUtil.dominantColor(leHealthIcon));
 				healthColorStepperR.value = coolColor.red;
@@ -540,7 +540,7 @@ class CharacterEditorState extends MusicBeatState
 
 		scaleStepper = new FlxUINumericStepper(15, singDurationStepper.y + 40, 0.1, 1, 0.05, 10, 1);
 
-		flipXCheckBox = new FlxUICheckBox(singDurationStepper.x + 80, singDurationStepper.y, null, null, "Flip X", 50);
+		flipXCheckBox = new FlxUICheckBox(singDurationStepper.x + 80, singDurationStepper.y, null, null, "Flip X?", 50);
 		flipXCheckBox.checked = char.flipX;
 		if(char.isPlayer) flipXCheckBox.checked = !flipXCheckBox.checked;
 		flipXCheckBox.callback = function() {
@@ -576,13 +576,13 @@ class CharacterEditorState extends MusicBeatState
 		healthColorStepperG = new FlxUINumericStepper(singDurationStepper.x + 65, saveCharacterButton.y, 20, char.healthColorArray[1], 0, 255, 0);
 		healthColorStepperB = new FlxUINumericStepper(singDurationStepper.x + 130, saveCharacterButton.y, 20, char.healthColorArray[2], 0, 255, 0);
 
-		tab_group.add(new FlxText(15, imageInputText.y - 18, 0, 'Image file name:'));
-		tab_group.add(new FlxText(15, healthIconInputText.y - 18, 0, 'Health icon name:'));
-		tab_group.add(new FlxText(15, singDurationStepper.y - 18, 0, 'Sing Animation length:'));
+		tab_group.add(new FlxText(15, imageInputText.y - 18, 0, 'Character Image name:'));
+		tab_group.add(new FlxText(15, healthIconInputText.y - 18, 0, 'Character icon name:'));
+		tab_group.add(new FlxText(15, singDurationStepper.y - 18, 0, 'Animation duration:'));
 		tab_group.add(new FlxText(15, scaleStepper.y - 18, 0, 'Scale:'));
-		tab_group.add(new FlxText(positionXStepper.x, positionXStepper.y - 18, 0, 'Character X/Y:'));
-		tab_group.add(new FlxText(positionCameraXStepper.x, positionCameraXStepper.y - 18, 0, 'Camera X/Y:'));
-		tab_group.add(new FlxText(healthColorStepperR.x, healthColorStepperR.y - 18, 0, 'Health bar R/G/B:'));
+		tab_group.add(new FlxText(positionXStepper.x, positionXStepper.y - 18, 0, 'Characters X/Y:'));
+		tab_group.add(new FlxText(positionCameraXStepper.x, positionCameraXStepper.y - 18, 0, 'Characters Camera X/Y:'));
+		tab_group.add(new FlxText(healthColorStepperR.x, healthColorStepperR.y - 18, 0, 'Character Icon Health bar color R/G/B:'));
 		tab_group.add(imageInputText);
 		tab_group.add(reloadImage);
 		tab_group.add(decideIconColor);

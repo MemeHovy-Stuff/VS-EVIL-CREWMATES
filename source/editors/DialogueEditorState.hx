@@ -231,7 +231,7 @@ class DialogueEditorState extends MusicBeatState
 		}
 	}
 
-	private static var DEFAULT_TEXT:String = "coolswag";
+	private static var DEFAULT_TEXT:String = "i'm the gayest homicide ever OWO";
 	private static var DEFAULT_SPEED:Float = 0.05;
 	private static var DEFAULT_BUBBLETYPE:String = "normal";
 	function reloadText(skipDialogue:Bool) {
@@ -434,7 +434,7 @@ class DialogueEditorState extends MusicBeatState
 			character.playAnim(character.jsonFile.animations[curAnim].anim, daText.finishedText);
 			animText.text = 'Animation: ' + character.jsonFile.animations[curAnim].anim + ' (' + (curAnim + 1) +' / ' + leLength + ') - Press W or S to scroll';
 		} else {
-			animText.text = 'ERROR! NO ANIMATIONS FOUND';
+			animText.text = 'ERROR! NO ANIMATIONS LOADED OR FOUND!';
 		}
 		characterAnimSpeed();
 
@@ -558,6 +558,6 @@ class DialogueEditorState extends MusicBeatState
 		_file.removeEventListener(Event.CANCEL, onSaveCancel);
 		_file.removeEventListener(IOErrorEvent.IO_ERROR, onSaveError);
 		_file = null;
-		FlxG.log.error("Problem saving file");
+		FlxG.log.error("Problem saving this file");
 	}
 }

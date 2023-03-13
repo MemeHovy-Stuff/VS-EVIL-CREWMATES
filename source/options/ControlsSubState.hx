@@ -59,7 +59,10 @@ class ControlsSubState extends MusicBeatSubstate {
 		[''],
 		['DEBUG'],
 		['Key 1', 'debug_1'],
-		['Key 2', 'debug_2']
+		['Key 2', 'debug_2'],
+		[''],
+		['MECHANICS'],
+		['Space', 'mech_space']
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -72,7 +75,7 @@ class ControlsSubState extends MusicBeatSubstate {
 		super();
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.color = 0xFFea71fd;
+		bg.color = 0xffff7ca8;
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);

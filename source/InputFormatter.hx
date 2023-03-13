@@ -95,3 +95,5 @@ class InputFormatter {
 		}
 	}
 }
+
+// why the fuck does this look like binary code?
