@@ -7,8 +7,8 @@ import flixel.graphics.FlxGraphic;
 import Controls;
 
 class ClientPrefs {
-	public static var stupidUI:Bool = false;
-	public static var baseUI:Bool = false;
+	public static var stupidUI:Bool = true;
+	public static var fnfUI:Bool = true;
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
 	public static var opponentStrums:Bool = true;
@@ -86,7 +86,8 @@ class ClientPrefs {
 		'volume_down'	=> [NUMPADMINUS, MINUS],
 		
 		'debug_1'		=> [SEVEN, NONE],
-		'debug_2'		=> [EIGHT, NONE]
+		'debug_2'		=> [EIGHT, NONE],
+		'mech_space'	=> [SPACE, SPACE],
 	];
 	public static var defaultKeys:Map<String, Array<FlxKey>> = null;
 
@@ -96,6 +97,8 @@ class ClientPrefs {
 	}
 
 	public static function saveSettings() {
+		FlxG.save.data.stupidUI = stupidUI;
+		FlxG.save.data.fnfUI = fnfUI;
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
 		FlxG.save.data.opponentStrums = opponentStrums;

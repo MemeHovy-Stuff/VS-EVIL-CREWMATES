@@ -4,6 +4,7 @@ package options;
 import Discord.DiscordClient;
 #end
 import flash.text.TextField;
+import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
@@ -24,34 +25,33 @@ import flixel.util.FlxTimer;
 import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
 import Controls;
+import openfl.Lib;
 
 using StringTools;
 
-class UISettingsMenuState extends BaseOptionsMenu
+class GraphicsSettingsSubState extends BaseOptionsMenu
 {
 	public function new()
 	{
-		title = 'WIP OPTIONS - UI Settings menu';
-		rpcTitle = 'WIP OPTIONS - UI Settings menu'; //for Discord Rich Presence
+		title = 'Graphics';
+		rpcTitle = 'Graphics Settings Menu'; //for Discord Rich Presence
 
-		var option:Option = new Option('Vs Stupid UI', 
-			'If checked, this will show the vs stupid UI \n( This may crash if selected )',
-			'stupidHUD',
-			'bool',
-			false);
+
+		var option:Option = new Option('Vs Stupid UI',
+			'If checked, this adds-in the vs stupid UI', // change in timebar, score text and more
+			'stupidUI',
+			'bool', 
+			false); 
 		addOption(option);
 
 		var option:Option = new Option('Base game UI',
-			'If checked, every UI sprite will be changed to the base games UI \n( Work in progress! )',
-			'downScroll',
-			'bool',
-			false);
-		addOption(option);
-
+		'Adds-in a TERRIBLE UI', // bland as fuck, simplier score text, no rates, no misses, no timebar, ITS NOTHING
+		'fnfUI',
+		'bool', 
+		false); 
+	addOption(option);
+	
 		super();
 	}
 
 }
-
-// Vs Stupid UI - changed timebar, score text, and camera follow
-// Base game UI - deleted timebar, and smaller and simplier score text
