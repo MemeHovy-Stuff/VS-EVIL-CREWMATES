@@ -1,22 +1,50 @@
 {
 	"songs": [
-		["Spookeez", "spooky", [34, 51, 68]],
-		["South", "spooky", [34, 51, 68]],
-		["Monster", "monster", [34, 51, 68]]
+		[
+			"chains",
+			"",
+			[
+				66,
+				0,
+				0
+			]
+		],
+		[
+			"graspings",
+			"",
+			[
+				0,
+				0,
+				75
+			]
+		],
+		[
+			"l7ngz",
+			"",
+			[
+				0,
+				40,
+				0
+			]
+		]
 	],
-
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "",
 	"weekCharacters": [
-		"spooky",
+		"",
 		"bf",
-		"gf"
+		""
 	],
-	"weekBackground": "halloween",
-
-	"storyName": "Spooky Month",
-	"weekBefore": "week1",
-	"weekName": "Week 2",
-	"startUnlocked": true,
-
+	"storyName": "bitchless and homophopic freakungus",
+	"weekName": "Custom Week",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"weekBefore": "tutorial",
+	"startUnlocked": true
 }
