@@ -33,8 +33,8 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 {
 	public function new()
 	{
-		title = 'Graphics';
-		rpcTitle = 'Graphics Settings Menu'; //for Discord Rich Presence
+		title = 'UI Settings';
+		rpcTitle = 'UI Settings Menu ( WIP )'; //for Discord Rich Presence
 
 
 		var option:Option = new Option('Vs Stupid UI',
