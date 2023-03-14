@@ -7,8 +7,9 @@ import flixel.graphics.FlxGraphic;
 import Controls;
 
 class ClientPrefs {
-	public static var stupidUI:Bool = true;
-	public static var fnfUI:Bool = true;
+	public static var psychLove:Bool = true;
+	public static var stupidUI:Bool = false;
+	public static var fnfUI:Bool = false;
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
 	public static var opponentStrums:Bool = true;
@@ -97,6 +98,7 @@ class ClientPrefs {
 	}
 
 	public static function saveSettings() {
+		FlxG.save.data.psychLove = psychLove;
 		FlxG.save.data.stupidUI = stupidUI;
 		FlxG.save.data.fnfUI = fnfUI;
 		FlxG.save.data.downScroll = downScroll;

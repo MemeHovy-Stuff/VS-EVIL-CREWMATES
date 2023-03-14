@@ -50,6 +50,13 @@ class UISettingsMenuState extends BaseOptionsMenu
 		'bool', 
 		false); 
 	addOption(option);
+
+	var option:Option = new Option('Normal Psych UI',
+	'Adds-in a CUSTOMIZEABLE UI\n( you may to use a different engine to customize it )', // best UI ever, you can change it around and stuff. I LOVE PSYCH :)
+	'psychLove',
+	'bool', 
+	false); 
+   addOption(option);
 	
 		super();
 	}
