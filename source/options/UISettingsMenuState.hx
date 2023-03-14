@@ -56,7 +56,7 @@ class UISettingsMenuState extends BaseOptionsMenu
 	'psychLove',
 	'bool', 
 	false); 
-   addOption(option);
+        addOption(option);
 	
 		super();
 	}
