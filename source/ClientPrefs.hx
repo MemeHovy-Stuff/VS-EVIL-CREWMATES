@@ -87,7 +87,7 @@ class ClientPrefs {
 		
 		'debug_1'		=> [SEVEN, NONE],
 		'debug_2'		=> [EIGHT, NONE],
-		'mech_space'	=> [SPACE, SPACE],
+		'mech_space'	=> [SPACE, SPACE]
 	];
 	public static var defaultKeys:Map<String, Array<FlxKey>> = null;
 

@@ -49,7 +49,7 @@ class OptionsState extends MusicBeatState
 			case 'Adjust Delay and Combo':
 				LoadingState.loadAndSwitchState(new options.NoteOffsetState());
 			case 'UI Settings':
-					LoadingState.loadAndSwitchState(new options.UISettingsMenuState());
+				openSubState(new options.UISettingsMenuState());
 		}
 	}
 
